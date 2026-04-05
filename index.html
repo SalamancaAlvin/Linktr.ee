@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Lawliet | Programador</title>
     
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -35,6 +39,8 @@
             transition: all 0.2s ease;
             position: relative;
             z-index: 10;
+            text-decoration: none;
+            color: inherit;
         }
 
         .custom-pill:hover {
@@ -43,14 +49,12 @@
             background-color: #fafafa;
         }
 
-        .custom-pill:active {
-            transform: scale(0.98);
-        }
-
         .custom-pill i.left-icon {
             position: absolute;
             left: 20px;
             font-size: 20px;
+            width: 24px;
+            text-align: center;
         }
 
         .custom-pill i.arrow-icon {
@@ -73,7 +77,8 @@
         }
 
         #stack-content.show {
-            max-height: 400px;
+            /* Aumentado para que quepan las 2 filas de iconos */
+            max-height: 500px; 
             opacity: 1;
             margin-bottom: 20px;
         }
@@ -85,6 +90,16 @@
             border: 1px solid #f0f0f0;
             width: 100%;
         }
+
+        /* Colores oficiales de respaldo para asegurar visibilidad */
+        .devicon-rust-plain { color: #f74c00 !important; }
+        .devicon-cplusplus-plain { color: #00599c !important; }
+        .devicon-python-plain { color: #3776ab !important; }
+        .devicon-typescript-plain { color: #3178c6 !important; }
+        .devicon-react-original { color: #61dafb !important; }
+        .devicon-nodejs-plain { color: #339933 !important; }
+        .devicon-docker-plain { color: #2496ed !important; }
+        .devicon-azuresqldatabase-plain { color: #0078d4 !important; } /* Icono para SQL */
     </style>
 </head>
 <body class="antialiased flex justify-center">
@@ -121,30 +136,41 @@
 
             <div id="stack-content">
                 <div class="stack-box shadow-inner">
-                    <div class="grid grid-cols-4 gap-4 mb-6">
+                    <div class="grid grid-cols-4 gap-x-4 gap-y-6">
+                        
                         <div class="flex flex-col items-center gap-2">
-                            <i class="devicon-rust-original colored text-3xl"></i>
+                            <i class="devicon-rust-plain text-3xl"></i>
                             <span class="text-[10px] font-bold text-gray-400 uppercase">Rust</span>
                         </div>
                         <div class="flex flex-col items-center gap-2">
-                            <i class="devicon-cplusplus-plain colored text-3xl"></i>
+                            <i class="devicon-cplusplus-plain text-3xl"></i>
                             <span class="text-[10px] font-bold text-gray-400 uppercase">C++</span>
                         </div>
                         <div class="flex flex-col items-center gap-2">
-                            <i class="devicon-python-plain colored text-3xl"></i>
+                            <i class="devicon-python-plain text-3xl"></i>
                             <span class="text-[10px] font-bold text-gray-400 uppercase">Python</span>
                         </div>
                         <div class="flex flex-col items-center gap-2">
-                            <i class="devicon-typescript-plain colored text-3xl"></i>
+                            <i class="devicon-typescript-plain text-3xl"></i>
                             <span class="text-[10px] font-bold text-gray-400 uppercase">TS</span>
                         </div>
-                    </div>
-                    
-                    <div class="flex flex-wrap justify-center gap-2 pt-4 border-t border-gray-100">
-                        <span class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[11px] font-bold text-gray-500 shadow-sm">React</span>
-                        <span class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[11px] font-bold text-gray-500 shadow-sm">Node.js</span>
-                        <span class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[11px] font-bold text-gray-500 shadow-sm">Docker</span>
-                        <span class="px-3 py-1 bg-white border border-gray-100 rounded-full text-[11px] font-bold text-gray-500 shadow-sm">SQL</span>
+
+                        <div class="flex flex-col items-center gap-2">
+                            <i class="devicon-react-original text-3xl"></i>
+                            <span class="text-[10px] font-bold text-gray-400 uppercase">React</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <i class="devicon-nodejs-plain text-3xl"></i>
+                            <span class="text-[10px] font-bold text-gray-400 uppercase">Node.js</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <i class="devicon-docker-plain text-3xl"></i>
+                            <span class="text-[10px] font-bold text-gray-400 uppercase">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <i class="devicon-azuresqldatabase-plain text-3xl"></i>
+                            <span class="text-[10px] font-bold text-gray-400 uppercase">SQL</span>
+                        </div>
                     </div>
                 </div>
             </div>
