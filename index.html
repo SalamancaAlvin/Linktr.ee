@@ -208,10 +208,13 @@
         <header class="flex flex-col items-center mb-9 text-center">
             <div class="relative w-24 h-24 mb-5">
                 <div class="w-full h-full rounded-full p-[2px]" style="background: linear-gradient(135deg, var(--accent), transparent 65%);">
-                    <img src="https://static.wikia.nocookie.net/deathnote/images/d/dd/L_-_Anime.png/revision/latest?cb=20190315084358&path-prefix=es"
-                         alt="Avatar de perfil de Lawliet (personaje L de Death Note)"
-                         class="w-full h-full object-cover rounded-full border-2 border-[var(--bg)]"
-                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Lawliet&background=16161a&color=ececee'">
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-[var(--bg)]" style="background: var(--card);">
+                        <img src="https://static.wikia.nocookie.net/deathnote/images/d/dd/L_-_Anime.png/revision/latest?cb=20190315084358&path-prefix=es"
+                             alt="Avatar de perfil de Lawliet (personaje L de Death Note)"
+                             referrerpolicy="no-referrer"
+                             class="w-full h-full object-contain object-bottom scale-125"
+                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Lawliet&background=16161a&color=ececee'; this.classList.remove('object-contain','object-bottom','scale-125'); this.classList.add('object-cover');">
+                    </div>
                 </div>
                 <span class="status-dot absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-[var(--accent)] border-2 border-[var(--bg)]" aria-hidden="true"></span>
             </div>
